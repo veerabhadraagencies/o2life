@@ -1,124 +1,175 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="O2 Life" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O2 Life | Pure Drinking Water</title>
 
-    <title>O2 Life | Packaged Drinking Water</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700|Raleway:300,400,500,600,700|Courgette&display=swap" rel="stylesheet" />
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="dark.css" />
-    <link rel="stylesheet" href="font-icons.css" />
-    <link rel="stylesheet" href="animate.css" />
-    <link rel="stylesheet" href="magnific-popup.css" />
-    <link rel="stylesheet" href="responsive.css" />
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5faff;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    .navbar {
+      transition: 0.3s;
+      padding: 18px 0;
+    }
+    .navbar.scrolled {
+      background: rgba(0, 53, 102, 0.95);
+      padding: 10px 0;
+      backdrop-filter: blur(10px);
+    }
+    .navbar a.nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    /* Hero */
+    .hero-section {
+      height: 100vh;
+      background: url('badripic4.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .hero-content {
+      position: relative;
+      color: #fff;
+      max-width: 800px;
+      animation: fadeInUp 1.2s ease;
+    }
+    .hero-title {
+      font-size: 90px;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px #000;
+    }
+    .hero-subtitle {
+      font-size: 32px;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* About */
+    #about {
+      padding: 120px 0;
+      background: #e8f5ff;
+    }
+    #about h2 {
+      font-weight: 700;
+      color: #003566;
+    }
+    #about p {
+      font-size: 18px;
+      margin-top: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #002244;
+      color: #cfe8ff;
+      padding: 60px 0;
+    }
+    footer a { color: #fff; }
+  </style>
 </head>
 
-<body class="stretched">
-    <div id="wrapper" class="clearfix">
-
-        <!-- Hero Section -->
-        <section id="slider" class="slider-parallax full-screen with-header force-full-screen clearfix">
-            <div class="full-screen force-full-screen hero-bg" style="background-image: url('badripic4.jpg');">
-                <div class="container text-center vertical-middle">
-                    <h1 class="fadeInLeft" style="font-size: 96px; text-shadow: 1px 1px 1px #000;">
-                        <strong>O2 Life</strong>
-                    </h1>
-                    <h2 class="fadeInRight subtitle">Packaged Drinking Water</h2>
-                    <h2 class="fadeInRight subtitle">Every drop is precious</h2>
-                </div>
-            </div>
-        </section>
-
-        <!-- Header -->
-        <header id="header" class="dark" data-sticky-class="dark">
-            <div id="header-wrap">
-                <div class="container clearfix">
-                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-                    <div id="logo">
-                        <a href="#" class="standard-logo" data-dark-logo="logo.svg">
-                            <img src="logo.svg" alt="O2 Life Logo">
-                        </a>
-                    </div>
-
-                    <!-- Navigation -->
-                    <nav id="primary-menu">
-                        <ul>
-                            <li class="current"><a href="#"><div>Home</div></a></li>
-                            <li><a href="#about"><div>Why O2Life?</div></a></li>
-                            <li><a href="#book"><div>Book</div></a></li>
-                            <li><a href="#login"><div>Login</div></a></li>
-                            <li><a href="#contact"><div>Contact</div></a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-
-        <div class="clear"></div>
-
-        <!-- About Section -->
-        <section id="content">
-            <div id="about" class="section parallax full-screen dark nomargin noborder" style="background-image: url('badripic1.jpg');" data-stellar-background-ratio="0.4">
-                <div class="vertical-middle">
-                    <div class="container clearfix">
-                        <div class="col_three_fifth nobottommargin">
-                            <div class="emphasis-title">
-                                <h2>Why O2LIFE?</h2>
-                                <p class="lead topmargin-sm">
-                                    Drinking water benefits your body only when it is clean and safe. Our stringent purification process—including UV treatment, reverse osmosis, and micro‑filtration—paired with multiple quality checks ensures the purity of every drop.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer id="footer" class="dark">
-            <div class="container" id="contact">
-                <div class="footer-widgets-wrap clearfix">
-                    <div class="widget clearfix">
-                        <div id="logo">
-                            <a href="#" class="standard-logo" data-dark-logo="logo.svg">
-                                <img src="logo.svg" alt="O2 Life Logo">
-                            </a>
-                        </div>
-
-                        <p>We <strong>deliver</strong> at your <strong>doorstep</strong></p>
-
-                        <div class="col_three_fifth nobottommargin contact-block">
-                            <div class="world-map" style="background-image: url('world-map.png');">
-                                <address>
-                                    <strong>Marketed By:</strong><br>
-                                    Veerabhadra Agencies<br>
-                                    Gachibowli, Hyderabad<br>
-                                </address>
-                                <p><strong>Mobile:</strong> (+91) 9848687481, 9703259648</p>
-                                <p><strong>Email:</strong> badri.ch86@gmail.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold fs-3" href="#">O2 Life</a>
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Why O2Life?</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <!-- Go To Top -->
-    <div id="gotoTop" class="icon-angle-up"></div>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">O2 Life</h1>
+      <p class="hero-subtitle">Packaged Drinking Water</p>
+      <p class="hero-subtitle">Every drop is precious</p>
+      <a href="#book" class="btn btn-primary btn-lg mt-4 px-5 py-3">Book Now</a>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="jquery.js"></script>
-    <script src="plugins.js"></script>
-    <script src="functions.js"></script>
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2>Why O2LIFE?</h2>
+          <p>
+            Drinking water helps your body only when it is clean and safe. Our multi-stage purification—including UV treatment, reverse osmosis, and micro-filtration—along with strict quality checks ensures purity in every drop.
+          </p>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="badripic1.jpg" class="img-fluid rounded shadow" alt="Water Plant" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container text-center">
+      <img src="logo.svg" width="120" class="mb-3" alt="O2 Life Logo" />
+      <p class="mb-4">We <strong>deliver</strong> at your <strong>doorstep</strong></p>
+
+      <p><strong>Marketed By:</strong> Veerabhadra Agencies, Gachibowli, Hyderabad</p>
+      <p><strong>Mobile:</strong> (+91) 9848687481, 9703259648</p>
+      <p><strong>Email:</strong> badri.ch86@gmail.com</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sticky header effect
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
 </body>
 </html>
