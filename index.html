@@ -18,23 +18,40 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #f5faff;
+      background-color: #ffffff;
+      color: #1a1a1a;
       overflow-x: hidden;
+    }
+
+    /* Gold Accent */
+    :root {
+      --gold: #d4af37;
+      --gold-light: #e9d8a6;
     }
 
     /* Header */
     .navbar {
       transition: 0.3s;
-      padding: 18px 0;
+      padding: 22px 0;
+      background: transparent;
     }
     .navbar.scrolled {
-      background: rgba(0, 53, 102, 0.95);
-      padding: 10px 0;
-      backdrop-filter: blur(10px);
+      background: #ffffff;
+      border-bottom: 1px solid #f3e9c9;
+      padding: 14px 0;
     }
     .navbar a.nav-link {
-      color: #fff !important;
+      color: #1a1a1a !important;
       font-weight: 500;
+      letter-spacing: 0.4px;
+    }
+    .navbar a.nav-link:hover {
+      color: var(--gold) !important;
+    }
+    .navbar-brand {
+      color: var(--gold) !important;
+      font-weight: 600;
+      letter-spacing: -1px;
     }
 
     /* Hero */
@@ -50,56 +67,84 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: rgba(255, 255, 255, 0.35);
     }
     .hero-content {
       position: relative;
-      color: #fff;
-      max-width: 800px;
+      color: #1a1a1a;
+      max-width: 760px;
       animation: fadeInUp 1.2s ease;
     }
     .hero-title {
-      font-size: 90px;
-      font-weight: 700;
-      text-shadow: 2px 2px 8px #000;
+      font-size: 78px;
+      font-weight: 600;
+      letter-spacing: -1px;
+    }
+    .hero-title span {
+      color: var(--gold);
     }
     .hero-subtitle {
-      font-size: 32px;
+      font-size: 24px;
       font-weight: 300;
-      margin-top: 10px;
+      margin-top: 12px;
+      opacity: 0.8;
     }
+
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* About */
     #about {
-      padding: 120px 0;
-      background: #e8f5ff;
+      padding: 150px 0;
+      background: #ffffff;
     }
     #about h2 {
-      font-weight: 700;
-      color: #003566;
+      font-weight: 600;
+      font-size: 44px;
+      letter-spacing: -1px;
+      border-left: 4px solid var(--gold);
+      padding-left: 18px;
     }
     #about p {
-      font-size: 18px;
-      margin-top: 15px;
+      font-size: 19px;
+      margin-top: 20px;
+      line-height: 1.8;
+    }
+    #about img {
+      border-radius: 0;
+      border: 1px solid #f2e8cc;
+    }
+
+    /* Button */
+    .btn-primary {
+      background: var(--gold);
+      border: none;
+      border-radius: 0;
+      padding: 14px 42px;
+      font-size: 16px;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .btn-primary:hover {
+      background: #b8962f;
     }
 
     /* Footer */
     footer {
-      background: #002244;
-      color: #cfe8ff;
-      padding: 60px 0;
+      background: #ffffff;
+      color: #1a1a1a;
+      border-top: 1px solid #f3e9c9;
+      padding: 80px 0;
     }
-    footer a { color: #fff; }
+    footer p {
+      margin: 8px 0;
+      font-size: 15px;
+    }
+    footer img {
+      filter: sepia(60%) brightness(0.7) saturate(200%);
+    }
   </style>
 </head>
 
@@ -141,7 +186,7 @@
         <div class="col-lg-6">
           <h2>Why O2LIFE?</h2>
           <p>
-            Drinking water helps your body only when it is clean and safe. Our multi-stage purification—including UV treatment, reverse osmosis, and micro-filtration—along with strict quality checks ensures purity in every drop.
+            Drinking water helps your body only when it is clean and safe. Our multi‑stage purification—including UV treatment, reverse osmosis, and micro‑filtration—along with strict quality checks ensures purity in every drop.
           </p>
         </div>
         <div class="col-lg-6 text-center">
@@ -155,7 +200,7 @@
   <footer id="contact">
     <div class="container text-center">
       <img src="logo.svg" width="120" class="mb-3" alt="O2 Life Logo" />
-     
+      <p class="mb-4">We <strong>deliver</strong> at your <strong>doorstep</strong></p>
 
       <p><strong>Marketed By:</strong> Veerabhadra Agencies, Gachibowli, Hyderabad</p>
       <p><strong>Mobile:</strong> (+91) 9848687481, 9703259648</p>
